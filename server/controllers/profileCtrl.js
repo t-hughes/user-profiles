@@ -22,19 +22,19 @@ var profiles = [
 ];
 
 module.exports = {
-  getFriends: function(req, res) {
-    var friendsArr = [];
-    for (var i = 0; i < req.session.currentUser.friends.length; i++) {
+  getFriends: function(req, res, next) {
+    var currentUserFriends = req.session.currentUser.friends;
+    var friendsArray = [];
+    for (var i = 0; i < currentUserFriends.length; i++) {
       for (var j = 0; j < profiles.length; j++) {
-        if (req.session.currentUser.friends[i] === profiles[j].name) {
-          friendsArr.push(profiles[j]);
+        if (currentUserFriends[i] === profiles[j].name) {
+          friendsArray.push(profiles[j]);
         }
       }
     }
-    res.status(200).send({
-      currentUser: req.session.currentUser,
-      friends: friendsArr
-    });
-
+    res.send(friendsArray);
+  },
+  getCurrentUserName: function(req, res, next) {
+    res.send(req.session.currentUser.name);
   }
 };

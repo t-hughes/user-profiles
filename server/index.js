@@ -9,8 +9,8 @@ var port = 2000;
 
 //REQUIRED FILES
 var config = require('./config');
-var users = require('./controllers/userCtrl');
-var profiles = require('./controllers/profileCtrl');
+var profileCtrl = require('./controllers/profileCtrl');
+var userCtrl = require('./controllers/userCtrl');
 
 var app = express();
 
@@ -22,13 +22,18 @@ var corsOptions = {
 
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
-app.use(session({ secret: config.sessionSecret }));
 app.use(express.static(__dirname + './../public'));
+app.use(session({
+  secret: config.sessionSecret,
+  saveUninitialized: false,
+  resave: false
+ }));
+
 
 //ENDPOINTS
-app.post('/api/login', users.login);
-app.get('/api/profiles', profiles.getFriends);
-
+app.post('/api/login', userCtrl.login);
+app.get('/api/profiles', profileCtrl.getFriends);
+app.get('/api/currentUserName', profileCtrl.getCurrentUserName);
 
 
 app.listen(port, function(){

@@ -2,7 +2,7 @@
   "name": "user-profiles",
   "version": "1.0.0",
   "description": "Today we will be creating a user profiles page that tracks the current user on the back-end and displays information specific to that user. This app will serve all of our front end files, preventing the need for `live-server` or `http-server`. By the end of the project you will be comfortable using express sessions, hiding application secrets, and serving static files from the back-end.",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

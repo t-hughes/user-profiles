@@ -22,14 +22,19 @@ var users = [
 ];
 
 module.exports = {
-  login: function(req, res) {
+  login: function(req, res, next) {
     for (var i = 0; i < users.length; i++) {
-      if (users[i].name === req.body.name && req.body.password === users[i].password) {
+      if (users[i].name == req.body.name && users[i].password == req.body.password) {
           req.session.currentUser = users[i];
-          res.status(200).send({userFound: true});
-          return;
-        }
+          userFoundValue = true;
+          break;
       }
-      res.status(404).send({userFound: false});
+      else {
+        userFoundValue = false;
+      }
     }
-  };
+
+    res.send({ userFound: userFoundValue });
+  },
+
+};
