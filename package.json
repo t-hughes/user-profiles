@@ -1,0 +1,25 @@
+{
+  "name": "user-profiles",
+  "version": "1.0.0",
+  "description": "Today we will be creating a user profiles page that tracks the current user on the back-end and displays information specific to that user. This app will serve all of our front end files, preventing the need for `live-server` or `http-server`. By the end of the project you will be comfortable using express sessions, hiding application secrets, and serving static files from the back-end.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-hughes/user-profiles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t-hughes/user-profiles/issues"
+  },
+  "homepage": "https://github.com/t-hughes/user-profiles#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1"
+  }
+}
