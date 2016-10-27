@@ -6,11 +6,9 @@ angular.module('userProfiles')
 			if (response.data.userFound) {
 				$location.path('/profile');
 			} else {
-				alert('Incorrect username or password');
+				alert('user not found');
 			}
 		});
 	};
-
-
 
 });

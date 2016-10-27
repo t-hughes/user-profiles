@@ -5,8 +5,8 @@
 
 @color1: #FFFFFF;   // background
 @color2: #000000;   // header, footer
-@dkgrey: #060606; 
-@btn: #06BBFF;   
+@dkgrey: #060606;
+@btn: #06BBFF;
 @font1: 'Raleway', sans-serif;
 
 // GLOBAL STYLES
@@ -40,10 +40,10 @@ header {
   color: @color1;
   width: 100%;
   font-family: @font1;
-  
+
   a {
     text-decoration: none;
-    color: @color1; 
+    color: @color1;
     position: absolute;
     top: 0;
     left: 0;
@@ -57,7 +57,7 @@ header {
       letter-spacing: 0.1em;
       height: 40px;
       padding: 10px;
-    }     
+    }
   }
 }
 
@@ -66,12 +66,12 @@ input {
   height: 25px;
   border: 1px solid @btn;
   margin-bottom: 10px;
-  font-family: @font1; 
+  font-family: @font1;
   padding-left: 2%;
 }
 
 input[type="text"]::-webkit-input-placeholder {
-  font-family: @font1; 
+  font-family: @font1;
 }
 
 input[type="password"]::-webkit-input-placeholder {
@@ -88,7 +88,7 @@ a {
   font-weight: bold;
   letter-spacing: 0.1em;
   text-decoration: none;
-  
+
   &:hover {
     color: @color2;
   }
@@ -100,7 +100,7 @@ a {
 .wrapper {
   max-width: 650px;
   margin: 200px auto;
-  
+
   img {
     width: 300px;
     height: 200px;
@@ -117,7 +117,7 @@ a {
     padding-left: 20px;
     background-color: @dkgrey;
     border: 2px solid @dkgrey;
-    
+
     button {
       background-color: @btn;
       width: 80px;
@@ -127,11 +127,11 @@ a {
       font-family: @font1;
       font-weight: bold;
       letter-spacing: 0.1em;
-      
+
       a {
       padding: 5px 15px;
       text-decoration: none;
-      
+
       &:hover {
         color: @color2;
       }
@@ -152,14 +152,14 @@ a {
   border-bottom: 5px solid @btn;
 }
 
-.logo {  
+.logo {
   img {
     z-index: 10;
     width: 40px;
     height: auto;
     position: absolute;
     top: 3.5%;
-    left: 4%;   
+    left: 4%;
   }
 }
 
@@ -175,10 +175,10 @@ a {
   flex: 1;
   background-color: @dkgrey;
   border-right: 5px solid @btn;
-  background-image: url(../images/grey_squares2.png);
+  background-image: url(/images/grey_squares2.png);
   background-repeat: repeat;
   color: @color1;
-  
+
   img {
     border-radius: 100%;
     float: left;
@@ -187,7 +187,7 @@ a {
     width: 80px;
     height: auto;
   }
-  
+
   ul {
     width: 80%;
     margin: 0 5% 0 3%;
@@ -199,12 +199,12 @@ a {
       list-style: none;
     }
   }
-}  
+}
 
 
 .friends {
   flex: 3;
-  
+
   img {
     border-radius: 100%;
     float: left;
@@ -213,7 +213,7 @@ a {
     width: 80px;
     height: auto;
   }
-  
+
   ul {
     clear: both;
     width: 80%;
@@ -225,7 +225,7 @@ a {
       padding-bottom: 2%;
       list-style: none;
     }
-    
+
     hr {
       border: 0;
       height: 1px;
@@ -237,24 +237,22 @@ a {
 
 //.credit {
 //  background-color: @dkgrey;
-//  
+//
 //  p {
 //    font-size: 10px;
 //    font-weight: 300;
 //    color: @color1;
-//    
+//
 //    a {
 //      font-size: 10px;
 //      color: @dkgrey;
 //      text-decoration: none;
-//      
+//
 //      &:hover {
 //        font-size: 10px;
 //        color: @dkgrey;
 //        text-decoration: none;
-//      }        
+//      }
 //    }
 //  }
 //}
-
-
